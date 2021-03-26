@@ -1,0 +1,34 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+          Login
+        </div>
+        <div class="card-body">
+          <form [formGroup]="regis" (ngSubmit)="onSubmit()"> 
+            
+            <div class="form-group">
+              <input formControlName="email" [class.is-invalid]="regis.get('email').invalid && regis.get('email').touched"
+               class="form-control" type="text" placeholder="Email ..">
+             
+              <div *ngIf="regis.get('email').invalid && regis.get('email').touched" class="mt-2">
+                <p *ngIf="regis.get('email').errors ?.required"class="text-danger">Email is required</p>
+                <p *ngIf="regis.get('email').errors ?.email"class="text-danger">Please enter a valid email</p>
+              </div>
+            </div>
+
+             <div class="form-group">
+                <input formControlName="password" [class.is-invalid]="regis.get('password').invalid && regis.get('password').touched"
+                class="form-control" type="password" placeholder="Password ..">
+
+               <p *ngIf="Data" class="text-danger">Enter a valid password</p> 
+                <div *ngIf="regis.get('password').invalid && regis.get('password').touched" class="mt-2"> 
+                  <p *ngIf="regis.get('password').errors ?.required" class="text-danger ">Enter your password</p>
+                </div>
+             </div>
+
+             <button [disabled]="!regis.valid" class="btn btn-success" type="submit">Login</button>
+           
+        </form>
+        </div>
+      </div>
+</div>

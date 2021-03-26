@@ -1,0 +1,26 @@
+
+    <div class="container">
+        <h2>SIMPLE LAPOR</h2>
+        <form *ngIf="!success" action="" #Form="ngForm" (ngSubmit)="onSubmit()">
+        <p>Buat Laporan/Komentar</p>
+        <hr>
+        <input type="text" [style.border-bottom]="nama.invalid && nama.touched ? '2px solid red' : '2px solid black'" 
+        required ngModel name="nama" #nama="ngModel" class="input mr" 
+        placeholder="Nama Anda" [(ngModel)]="data.nama">
+
+        <p class="texterr" [style.display]="nama.valid || nama.untouched ? 'none' : 'block'">please Input your name</p>
+        
+        <textarea required [(ngModel)]="data.laporan" class="mr" [class.err]="Laporan.invalid && Laporan.touched" ngModel name="laporan" #Laporan="ngModel"></textarea>
+        <p class="texterr" [style.display]="Laporan.valid || Laporan.untouched ? 'none' : 'block'">please Input laporan anda</p>
+        
+        <select required class="input mr" [(ngModel)]="data.aspek" ngModel name="aspek" #Aspek="ngModel">
+            <option selected>Aspek</option>
+            <option>Dosen</option>
+            <option>Sarana</option>
+            <option>Mahasiswa</option>
+        </select>
+        <p class="texterr" [style.display]="Aspek.valid || Aspek.untouched ? 'none' : 'block'">please Input laporan anda</p>
+        
+        <button [disabled]="Form.form.invalid" class="btn" type="submit">Submit</button>
+    </form>
+    </div>

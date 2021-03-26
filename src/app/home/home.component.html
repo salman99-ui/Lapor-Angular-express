@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>SIMPLE LAPOR</h2>
+    
+    <div class="cinput">
+      <input #input (keyup)="search(input.value)" type="text" placeholder="filter .." class="input">
+      <button class="cari">Cari</button>
+    </div>
+  
+    <a class="link" href="/create">Buat Laporan/Komentar</a>
+  
+    <div class="body">
+      <P>Laporan/Komentar Terakhir</P>
+      <hr>
+      <div *ngFor="let x of Data" class="item">
+        <p>{{x.laporan}}</p>
+  
+        <span class="waktu">{{x.date}}</span>
+        <a href="test/{{x._id}}" class="deskripsi">Lihat Selengkapnya ></a>
+  
+        <hr>
+      </div>
+    </div>  
+  </div>

@@ -1,0 +1,66 @@
+.container{
+    margin: 3% 13% 0% 13%;
+
+}
+.container h2{
+    text-align: center;
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+.cinput{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.cinput .input{
+    height: 0px;
+    padding: 20px;
+    font-size: 18px;
+    width: 90%
+}
+
+.cinput .cari{
+    padding: 0 20px 0 20px;
+    width: 10%;
+    cursor: pointer;
+
+}
+
+.cinput .cari:hover{
+    background-color:seagreen;
+}
+
+.container .link{
+    margin: 25px 0 20px 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: blue;
+
+}
+
+hr{
+    height: 2px;
+    background-color: black;
+}
+.container .body .item{
+    margin-top: 30px;
+}
+
+
+.container .body .item .deskripsi{
+    float: right;
+    text-decoration: none;
+    
+    color: black;
+    letter-spacing: 1px;
+
+}
+
+.container .body .item .deskripsi:hover {
+    color: blue;
+    cursor: pointer;
+}

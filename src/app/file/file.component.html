@@ -1,0 +1,6 @@
+<div class="container">
+    <form [formGroup]="Form">
+        <input type="file" formControlName="file" name="fileto" class="form-control" (change)="onchange($event)">
+        <button class="btn btn-primary" (click)="onsubmit()">Submit</button>
+    </form>
+</div>
